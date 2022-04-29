@@ -1,30 +1,30 @@
-import { FETCH_COUSTMERS_REQUEST, FETCH_COUSTMERS_SUCCESS, FETCH_COUSTMERS_FAILURE } from './coustmersType';
+import { FETCH_CUSTOMERS_REQUEST, FETCH_CUSTOMERS_SUCCESS, FETCH_CUSTOMERS_FAILURE } from './customersType';
 
 const initialState = {
     loading: false,
-    coustmersList: [],
+    customersList: [],
     error: ''
 }
 
-const coustmersReducers = (state = initialState, action) => {
+const customersReducers = (state = initialState, action) => {
     switch (action.type) {
-        case FETCH_COUSTMERS_REQUEST:
+        case FETCH_CUSTOMERS_REQUEST:
             return {
                 ...initialState,
                 loading: true,
             }
 
-        case FETCH_COUSTMERS_SUCCESS:
+        case FETCH_CUSTOMERS_SUCCESS:
             return {
                 loading: false,
-                coustmersList : action.payload,
+                customersList : action.payload,
                 error : ''
             }
             
-        case FETCH_COUSTMERS_FAILURE:
+        case FETCH_CUSTOMERS_FAILURE:
             return {
                 loading: false,
-                coustmersList : [],
+                customersList : [],
                 error : action.payload
             }
         
@@ -33,4 +33,4 @@ const coustmersReducers = (state = initialState, action) => {
     }
 
 }
-export default coustmersReducers
+export default customersReducers

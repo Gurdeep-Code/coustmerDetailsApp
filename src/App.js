@@ -1,4 +1,4 @@
-import CoustmersList from './components/CoustmersList'
+import CustomersList from './components/CustomersList'
 import UserDetails from './components/UserDetails';
 import { Provider } from 'react-redux';
 import store from './redux/store';
@@ -10,7 +10,7 @@ function App() {
     <Provider store={store}>
       <div className="App">
         <Routes>
-          <Route path='/' element ={<CoustmersList />}/>
+          <Route path='/' element ={<CustomersList />}/>
           <Route path='UserDeatils/:userId' element ={<UserDetails />}/>
         </Routes>
       </div>

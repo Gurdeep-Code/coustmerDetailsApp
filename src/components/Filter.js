@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
-import '../css/cousList.css';
+import '../css/custList.css';
 
 function Filter() {
     const [country, setCountry] = useState("Peru");
@@ -12,13 +12,13 @@ function Filter() {
         prevCountryState.current = country;
     }, [country])
 
-    {/* ............. code for filteration .................. */}
+    {/* ............. code for filteration .................. */ }
     const filterHandler = useMemo(() => {
         const detailRowSelector = document.getElementsByClassName("detailRow");
         Array.from(detailRowSelector).forEach((elements) => {
             const detailRowChild = elements.children;
             (!detailRowChild[4].innerHTML.includes(city)) ? elements.style.display = "none" :
-            elements.style.display = "";
+                elements.style.display = "";
         })
     }, [city]);
 
@@ -35,27 +35,31 @@ function Filter() {
 
             {/* ............. list of city .................. */}
 
-            <select onClick={(e) => setCity(e.target.value)} className='cities' id="Peru">
+            <select onChange={(e) => setCity(e.target.value)} className='cities' id="Peru">
+                <option selected> </option>
                 <option value="Hansenland">Hansenland</option>
                 <option value="Collierstad">Collierstad</option>
             </select>
 
-            <select onClick={(e) => setCity(e.target.value)} className='cities' id="Taiwan">
+            <select onChange={(e) => setCity(e.target.value)} className='cities' id="Taiwan">
+                <option selected> </option>
                 <option value="New Bryana">New Bryana</option>
                 <option value="Morarbury">Morarbury</option>
             </select>
 
-            <select onClick={(e) => setCity(e.target.value)} className='cities' id="France">
+            <select onChange={(e) => setCity(e.target.value)} className='cities' id="France">
+                <option selected> </option>
                 <option value="Vonport">Vonport</option>
                 <option value="Jastshire">Jastshire</option>
                 <option value="West Esmeralda">West Esmeralda</option>
             </select>
 
-            <select onClick={(e) => setCity(e.target.value)} className='cities' id="Afghanistan">
+            <select onChange={(e) => setCity(e.target.value)} className='cities' id="Afghanistan">
+                <option selected> </option>
                 <option value="North Bell">North Bell</option>
                 <option value="Macejkovicborough">Macejkovicborough</option>
             </select>
-            <button onClick={()=>setCity("")}>Reset</button>
+            <button onClick={() => setCity("")}>Reset</button>
         </>
     )
 }

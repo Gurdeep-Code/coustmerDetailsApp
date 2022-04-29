@@ -1,22 +1,21 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { fetchCoustmersLists } from '../redux/fetchCoustmers/coustmersAction';
+import { fetchCustomersLists } from '../redux/fetchCustomers/customersAction';
 import { useNavigate } from 'react-router-dom';
 import Filter from './Filter';
-import '../css/cousList.css';
+import '../css/custList.css';
 
-function CoustmersList() {
+function CustomersList() {
   const dispatch = useDispatch();
-  const { coustmersList, loading } = useSelector(state => state);
+  const { customersList, loading } = useSelector(state => state);
   const navigate = useNavigate();
   const imagePath = 'https://randomuser.me/api/portraits/men/';
-  useEffect(() => dispatch(fetchCoustmersLists())
+  useEffect(() => dispatch(fetchCustomersLists())
     , []);
 
-  const CoustmersList = coustmersList.map((items) =>
-    <tr className='detailRow' key={items.id}>
-      <td><img onClick={() => navigate(`/UserDeatils/${items.id}`, { state: items })}
-        src={`${imagePath}${items.id}.jpg`} /></td>
+  const CustomersList = customersList.map((items) =>
+    <tr className='detailRow' key={items.id} onClick={() => navigate(`/UserDeatils/${items.id}`, { state: items })}>
+      <td><img src={`${imagePath}${items.id}.jpg`} /></td>
       <td>{items.name}</td>
       <td>{items.phone}</td>
       <td>{items.email}</td>
@@ -25,8 +24,8 @@ function CoustmersList() {
     </tr>);
 
   return (
-    <div className='cousList'>
-      <h2><b>CoustmersList</b></h2>
+    <div className='custList'>
+      <h2><b>Customers List</b></h2>
       <b><Filter /></b><br/><br/>
       {loading ? <b>Loading ....</b> :
         <>
@@ -42,7 +41,7 @@ function CoustmersList() {
               </tr>
             </thead>
             <tbody>
-              {CoustmersList}
+              {CustomersList}
             </tbody>
           </table>
         </>}
@@ -50,4 +49,4 @@ function CoustmersList() {
   )
 }
 
-export default CoustmersList
+export default CustomersList

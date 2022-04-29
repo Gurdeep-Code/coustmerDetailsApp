@@ -1,6 +1,6 @@
 {
-  "name": "coustmer-app",
-  "homepage": "https://Gurdeep-Code.github.io/coustmerDetailsApp",
+  "name": "customer-app",
+  "homepage": "https://Gurdeep-Code.github.io/customerDetailsApp",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

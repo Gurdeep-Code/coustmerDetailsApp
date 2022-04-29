@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLocation,useParams } from 'react-router-dom';
 import Filter from './Filter';
-import '../css/cousList.css'
+import '../css/custList.css'
 
 function UserDetails() {
     const location = useLocation();
