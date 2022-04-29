@@ -6,13 +6,13 @@ function Filter() {
     const [city, setCity] = useState("");
     const prevCountryState = useRef("");
 
-
     useEffect(() => {
         (prevCountryState.current != "") && (document.getElementById(`${prevCountryState.current}`).style.display = "none");
         document.getElementById(`${country}`).style.display = "inline";
         prevCountryState.current = country;
     }, [country])
 
+    {/* ............. code for filteration .................. */}
     const filterHandler = useMemo(() => {
         const detailRowSelector = document.getElementsByClassName("detailRow");
         Array.from(detailRowSelector).forEach((elements) => {
