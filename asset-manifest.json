@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/customerDetailsApp/static/css/main.16f6f454.css",
-    "main.js": "/customerDetailsApp/static/js/main.52babfd5.js",
-    "static/js/787.add64713.chunk.js": "/customerDetailsApp/static/js/787.add64713.chunk.js",
-    "index.html": "/customerDetailsApp/index.html",
-    "main.16f6f454.css.map": "/customerDetailsApp/static/css/main.16f6f454.css.map",
-    "main.52babfd5.js.map": "/customerDetailsApp/static/js/main.52babfd5.js.map",
-    "787.add64713.chunk.js.map": "/customerDetailsApp/static/js/787.add64713.chunk.js.map"
+    "main.css": "/coustomerDetailsApp/static/css/main.16f6f454.css",
+    "main.js": "/coustomerDetailsApp/static/js/main.b0300d6c.js",
+    "static/js/787.add64713.chunk.js": "/coustomerDetailsApp/static/js/787.add64713.chunk.js",
+    "index.html": "/coustomerDetailsApp/index.html",
+    "main.16f6f454.css.map": "/coustomerDetailsApp/static/css/main.16f6f454.css.map",
+    "main.b0300d6c.js.map": "/coustomerDetailsApp/static/js/main.b0300d6c.js.map",
+    "787.add64713.chunk.js.map": "/coustomerDetailsApp/static/js/787.add64713.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.16f6f454.css",
-    "static/js/main.52babfd5.js"
+    "static/js/main.b0300d6c.js"
   ]
 }
